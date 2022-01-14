@@ -1,5 +1,7 @@
 package torion
 
+import "github.com/Ancst/torion/models"
+
 // NewTorion returns a new blank Configuration instance, which is not configured and, you have to do it so.
 func NewTorion() *Configuration {
 	return &Configuration{}
@@ -13,8 +15,12 @@ func Default() *Configuration {
 		DisableDownload:  false,
 		WorkingDirectory: "",
 		TorrcFromFile:    "",
-		TorrcFromConf: &Torrc{
-			Port: 9050,
+		TorrcFromConf: &models.Torrc{
+			Options:       models.Options{},
+			Client:        models.Client{},
+			Server:        models.Server{},
+			DataDir:       models.DataDir{},
+			HiddenService: models.HiddenService{},
 		},
 	}
 }

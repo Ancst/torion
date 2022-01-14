@@ -1,6 +1,7 @@
 package torion
 
 import (
+	"github.com/Ancst/torion/models"
 	"time"
 )
 
@@ -35,12 +36,5 @@ type Configuration struct {
 	// TorrcFromConf allow you to pass the torrc file option in easy way and, without file and, you don't need to care about its syntax.
 	//
 	// TorrcFromConf will always overwrite by TorrcFromFile option, this means that you have to only use one of these at the same time.
-	TorrcFromConf *Torrc
-}
-
-type Torrc struct {
-	Port         int64
-	ExcludeNodes []string
-	EntryNodes   []string
-	ExitNodes    []string
+	TorrcFromConf *models.Torrc
 }
