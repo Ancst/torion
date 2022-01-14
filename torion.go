@@ -1,4 +1,4 @@
-package torion
+package main
 
 type torion interface {
 	Perform()
