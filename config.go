@@ -8,7 +8,7 @@ type Configuration struct {
 	// if MaxRetry option is set then, this will not panic until all requested amount of re-try fails.
 	//
 	// NOTE: When using bridges for tor, the bundle may have need longer time to connect to the network. By default, TORION will wait for bundle to get (100% Bootstrapped).
-	BootstrapTimeout time.Time
+	BootstrapTimeout time.Duration
 
 	// MaxRetry is the number of max TORION retry in case of timeout reach or connection-failure.
 	//
@@ -33,8 +33,12 @@ type Configuration struct {
 	// TorrcFromConf allow you to pass the torrc file option in easy way and, without file and, you don't need to care about its syntax.
 	//
 	// TorrcFromConf will always overwrite by TorrcFromFile option, this means that you have to only use one of these at the same time.
-	TorrcFromConf Torrc
+	TorrcFromConf *Torrc
 }
 
 type Torrc struct {
+	Port         int64
+	ExcludeNodes []string
+	EntryNodes   []string
+	ExitNodes    []string
 }
