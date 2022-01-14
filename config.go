@@ -1,6 +1,8 @@
 package torion
 
-import "time"
+import (
+	"time"
+)
 
 type Configuration struct {
 	// BootstrapTimeout determine how long TOR bundle allowed to reach the network, if this timeout reach, TORION will panic(Bootstrapping timeout reached).
