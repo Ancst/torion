@@ -1,6 +1,6 @@
 package torion
 
-type torion interface {
+type Torion interface {
 	Perform()
 }
 
