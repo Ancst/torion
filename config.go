@@ -30,11 +30,11 @@ type Configuration struct {
 
 	// TorrcFromFile will load your bundle-configuration from given absolute torrc configuration file path.
 	//
-	// TorrcFromFile will always overwrite the TorrcFromConf option, this means that you have to only use one of these at the same time.
+	// TorrcFromFile will always overwrite the TorrcConfig, this means that you have to only use one of these at the same time.
 	TorrcFromFile string
 
-	// TorrcFromConf allow you to pass the torrc file option in easy way and, without file and, you don't need to care about its syntax.
+	// TorrcConfig allow you to pass the torrc file option in easy way and, without file and, you don't need to care about its syntax.
 	//
-	// TorrcFromConf will always overwrite by TorrcFromFile option, this means that you have to only use one of these at the same time.
-	TorrcFromConf *models.Torrc
+	// TorrcConfig will always overwrite by TorrcFromFile, this means that you have to only use one of these at the same time.
+	TorrcConfig *models.Torrc
 }

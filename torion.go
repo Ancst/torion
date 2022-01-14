@@ -15,9 +15,13 @@ func Default() *Configuration {
 		DisableDownload:  false,
 		WorkingDirectory: "",
 		TorrcFromFile:    "",
-		TorrcFromConf: &models.Torrc{
-			Options:       models.Options{},
-			Client:        models.Client{},
+		TorrcConfig: &models.Torrc{
+			Options: models.Options{},
+			Client: models.Client{
+				ExcludeNodes: nil,
+				EntryNodes:   nil,
+				ExitNodes:    nil,
+			},
 			Server:        models.Server{},
 			DataDir:       models.DataDir{},
 			HiddenService: models.HiddenService{},
