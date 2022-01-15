@@ -1,4 +1,4 @@
-package models
+package torion
 
 type Client struct {
 	ExcludeNodes []string

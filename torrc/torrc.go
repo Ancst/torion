@@ -1,4 +1,4 @@
-package models
+package torion
 
 type Torrc struct {
 	Options       Options
