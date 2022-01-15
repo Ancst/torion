@@ -1,7 +1,5 @@
 package torion
 
-import "github.com/Ancst/torion/torrc"
-
 // NewTorion returns a new blank Configuration instance, which is not configured and, you have to do it so.
 func NewTorion() *Configuration {
 	return &Configuration{}
@@ -15,12 +13,12 @@ func Default() *Configuration {
 		DisableDownload:  false,
 		WorkingDirectory: "",
 		TorrcFromFile:    "",
-		TorrcConfig: &torrc.Torrc{
-			Options:       torrc.Options{},
-			Client:        torrc.Client{},
-			Server:        torrc.Server{},
-			DataDir:       torrc.DataDir{},
-			HiddenService: torrc.HiddenService{},
+		TorrcConfig: &Torrc{
+			Options:       Options{},
+			Client:        Client{},
+			Server:        Server{},
+			DataDir:       DataDir{},
+			HiddenService: HiddenService{},
 		},
 	}
 }
