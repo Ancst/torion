@@ -1,1 +1,1 @@
-# torion - this project is uncompleted and under maintenance
+# torion - this project is incomplete and under maintenance
